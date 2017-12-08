@@ -1,0 +1,17 @@
+.StartOver:hover{
+	color:white;
+	cursor:pointer;
+	width:30%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content, .AnalysisQuestion{
+	width:66%;
+	margin-left: auto;
+	margin-right: auto;
+	background: grey;
+	box-sizing: border-box;
+	padding:5px;
+	padding-bottom: 10px;
+}

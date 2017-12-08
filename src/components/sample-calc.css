@@ -1,0 +1,44 @@
+.CalcContainer{
+	width:66%;
+	background:darkgrey;
+	margin-left: auto;
+	margin-right:auto;
+}
+.TitleContainer{
+	background:grey;
+	width:100%;
+}
+.TitleContainer h2{
+	margin:0;
+	padding:10px;
+	border-top: black solid 1px;
+	border-bottom: black solid 1px;
+}
+.TitleContainer h2:hover{
+	color:white;
+	cursor:pointer;
+
+}
+div{
+	text-align: center;
+}
+.left{
+	float:left;
+	width:46%;
+	margin:1%;
+	padding:1%;
+}
+.right{
+	float:left;
+	width:46%;
+	margin:1%;
+	padding:1%;
+}
+.clear{
+	clear:both;
+}
+output{
+	font-size:18px;
+	font-weight: bold;
+	color:green;
+}

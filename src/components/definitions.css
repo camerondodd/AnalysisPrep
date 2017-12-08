@@ -1,0 +1,13 @@
+table{
+	width:66%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+th{
+	background: grey;
+}
+
+tr{
+	background:darkgrey;
+}
