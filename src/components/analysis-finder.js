@@ -3,11 +3,15 @@ import Header from './header';
 import './analysis-finder.css';
 import ToggleDisplay from 'react-toggle-display';
 import Question from './question';
+import {API_BASE_URL} from '../config';
+import axios from 'axios';
 
 export default class AnalysisFinder extends React.Component{
 	constructor(){
 		super();
 		this.state={
+			Answer:{},
+
 			type:"None",
 			purp:"None",
 			IV:"None",
@@ -59,6 +63,17 @@ export default class AnalysisFinder extends React.Component{
 			QAssNoNoM:false,
 		};
 	};
+	componentDidMount(){
+		this.loadAnswer();
+	};
+	loadAnswer(){
+		let search=`${this.state.type}/${this.state.purp}/${this.state.IV}/${this.state.CtP}/${this.state.OT}/${this.state.DVL}/${this.state.DV}/${this.state.IVL}/${this.state.fact}/${this.state.hier}/${this.state.mod}/${this.state.scale}/${this.state.EFQ}/${this.state.theory}/${this.state.var}/${this.state.DFA}`;
+		axios.get(`${API_BASE_URL}/${search}.json`)
+			.then(res => {
+				let Answer = res;
+				this.setState({Answer})
+			});
+	};
 	handleClickStart(){
 		this.setState({
 			title:false,
@@ -67,6 +82,8 @@ export default class AnalysisFinder extends React.Component{
 	};
 	StartOver(){
 		this.setState({
+			Answer:{},
+
 			type:"None",
 			purp:"None",
 			IV:"None",
@@ -642,6 +659,7 @@ export default class AnalysisFinder extends React.Component{
 				<ToggleDisplay show={this.state.A}>
 					<div className="AnalysisQuestion">
 						<h2>Answer Placeholder</h2>
+						<h2>{this.state.Answer.Name}</h2>
 						<p className="StartOver" onClick={()=>this.StartOver()}>Start Over?</p>
 					</div>
 				</ToggleDisplay>
