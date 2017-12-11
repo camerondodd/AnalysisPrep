@@ -1,10 +1,10 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import App from './App';
+import Calc from './calc';
 
-describe('<App />', ()=>{
+describe('<Calc />', ()=>{
 	it('Exists', ()=>{
-		shallow(<App />);
+		shallow(<Calc />);
 	});
 });
