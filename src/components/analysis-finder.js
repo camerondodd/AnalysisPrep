@@ -68,7 +68,7 @@ export default class AnalysisFinder extends React.Component{
 	};
 	loadAnswer(){
 		let search=`${this.state.type}/${this.state.purp}/${this.state.IV}/${this.state.CtP}/${this.state.OT}/${this.state.DVL}/${this.state.DV}/${this.state.IVL}/${this.state.fact}/${this.state.hier}/${this.state.mod}/${this.state.scale}/${this.state.EFQ}/${this.state.theory}/${this.state.var}/${this.state.DFA}`;
-		axios.get(`${API_BASE_URL}/api/${search}.json`)
+		axios.get(`${API_BASE_URL}api/${search}.json`)
 			.then(res => {
 				let Answer = res;
 				this.setState({Answer})
