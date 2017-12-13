@@ -662,7 +662,7 @@ export default class AnalysisFinder extends React.Component{
 				<ToggleDisplay show={this.state.A}>
 					<div className="AnalysisQuestion">
 						<h2>Answer Placeholder</h2>
-						<h2>{this.state.Answer.Name}</h2>
+						<h2>{this.state.Answer.name}</h2>
 						<p className="StartOver" onClick={()=>this.StartOver()}>Start Over?</p>
 					</div>
 				</ToggleDisplay>
