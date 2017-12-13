@@ -73,7 +73,7 @@ export default class AnalysisFinder extends React.Component{
 				let Answer = res;
 				this.setState({Answer})
 			});
-		console.log(Answer);
+		console.log({this.state.Answer});
 	};
 	handleClickStart(){
 		this.setState({
