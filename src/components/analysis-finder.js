@@ -51,8 +51,8 @@ export default class AnalysisFinder extends React.Component{
 			QInfContCatM:false,
 			QInfContCont:false,
 			QInfContContS:false,
-			QInfContContSS:false,
-			QInfContContSSMod:false,
+			QInfContContSM:false,
+			QInfContContSMMod:false,
 
 			QAss:false,
 			QAssYes:false,
@@ -68,7 +68,7 @@ export default class AnalysisFinder extends React.Component{
 	};
 	loadAnswer(){
 		let search=`${this.state.type}/${this.state.purp}/${this.state.IV}/${this.state.CtP}/${this.state.OT}/${this.state.DVL}/${this.state.DV}/${this.state.IVL}/${this.state.fact}/${this.state.hier}/${this.state.mod}/${this.state.scale}/${this.state.EFQ}/${this.state.theory}/${this.state.var}/${this.state.DFA}`;
-		axios.get(`${API_BASE_URL}/${search}.json`)
+		axios.get(`${API_BASE_URL}/api/${search}.json`)
 			.then(res => {
 				let Answer = res;
 				this.setState({Answer})
@@ -123,8 +123,8 @@ export default class AnalysisFinder extends React.Component{
 			QInfContCatM:false,
 			QInfContCont:false,
 			QInfContContS:false,
-			QInfContContSS:false,
-			QInfContContSSMod:false,
+			QInfContContSM:false,
+			QInfContContSMMod:false,
 
 			QAss:false,
 			QAssYes:false,
@@ -388,45 +388,45 @@ export default class AnalysisFinder extends React.Component{
 					QInfContContSS(){
 						this.setState({
 							QInfContContS:false,
-							QInfContContSS:true,
+							A:true,
 							IV:"ContS"
 						});
+					};	
+					QInfContContSM(){
+						this.setState({
+							QInfContContS:false,
+							QInfContContSM:true,
+							IV:"ContM"
+						});
 					};
-						QInfContContSSYes(){
+						QInfContContSMYes(){
 							this.setState({
-								QInfContContSS:false,
-								QInfContContSSMod:true,
+								QInfContContSM:false,
+								QInfContContSMMod:true,
 								hier:"Yes"
 							});
 						};
-						QInfContContSSNo(){
+						QInfContContSMNo(){
 							this.setState({
-								QInfContContSS:false,
-								QInfContContSSMod:true,
+								QInfContContSM:false,
+								QInfContContSMMod:true,
 								hier:"No"
 							});
 						};
-							QInfContContSSModYes(){
+							QInfContContSMModYes(){
 								this.setState({
-									QInfContContSSMod:false,
+									QInfContContSMMod:false,
 									A:true,
 									mod:"Yes"
 								});
 							};
-							QInfContContSSModNo(){
+							QInfContContSMModNo(){
 								this.setState({
-									QInfContContSSMod:false,
+									QInfContContSMMod:false,
 									A:true,
 									mod:"No"
 								});
 							};
-					QInfContContSM(){
-						this.setState({
-							QInfContContS:false,
-							A:true,
-							IV:"ContM"
-						});
-					};
 				QInfContContM(){
 					this.setState({
 						QInfContCont:false,
@@ -613,7 +613,7 @@ export default class AnalysisFinder extends React.Component{
 					f1={()=>this.QInfContCatS()} f2={()=>this.QInfContCatM()} StartOver={()=>this.StartOver()}/>
 				<Question display={this.state.QInfContCatS} q="Do you want to know how much influence each variable has?" 
 					a1="Yes" a2="No" 
-					f1={()=>this.QInfContCatSYes()} f2={()=>this.QInfContCattSNo()} StartOver={()=>this.StartOver()}/>
+					f1={()=>this.QInfContCatSYes()} f2={()=>this.QInfContCatSNo()} StartOver={()=>this.StartOver()}/>
 				<Question display={this.state.QInfContCatM} q="Do you want to know how much influence each variable has?" 
 					a1="Yes" a2="No" 
 					f1={()=>this.QInfContCatMYes()} f2={()=>this.QInfContCattMNo()} StartOver={()=>this.StartOver()}/>
@@ -623,12 +623,15 @@ export default class AnalysisFinder extends React.Component{
 				<Question display={this.state.QInfContContS} q="How many IV do you have?" 
 					a1="One" a2="More" 
 					f1={()=>this.QInfContContSS()} f2={()=>this.QInfContContSM()} StartOver={()=>this.StartOver()}/>
-				<Question display={this.state.QInfContContSS} q="Do you want to know how much influence each variable has?" 
+				
+
+
+				<Question display={this.state.QInfContContSM} q="Do you want to know how much influence each variable has?" 
 					a1="Yes" a2="No" 
-					f1={()=>this.QInfContContSSYes()} f2={()=>this.QInfContContSSNo()} StartOver={()=>this.StartOver()}/>
-				<Question display={this.state.QInfContContSSMod} q="Do you think other variables can influence your DV?" 
+					f1={()=>this.QInfContContSMYes()} f2={()=>this.QInfContContSMNo()} StartOver={()=>this.StartOver()}/>
+				<Question display={this.state.QInfContContSMMod} q="Do you think other variables can influence your DV?" 
 					a1="Yes" a2="No" 
-					f1={()=>this.QInfContContSSModYes()} f2={()=>this.QInfContContSSModNo()} StartOver={()=>this.StartOver()}/>
+					f1={()=>this.QInfContContSMModYes()} f2={()=>this.QInfContContSMModNo()} StartOver={()=>this.StartOver()}/>
 
 				
 
@@ -638,7 +641,7 @@ export default class AnalysisFinder extends React.Component{
 				<Question display={this.state.QAssYes} q="Has the scale been validated before?" 
 					a1="Yes" a2="No" 
 					f1={()=>this.QAssYesYes()} f2={()=>this.QAssYesNo()} StartOver={()=>this.StartOver()}/>
-				<Question display={this.state.QAssYesNo} q="EFA QUESTION?" 
+				<Question display={this.state.QAssYesNo} q="Do you want the minimum number of factors?" 
 					a1="Yes" a2="No" 
 					f1={()=>this.QAssYesNoYes()} f2={()=>this.QAssYesNoNo()} StartOver={()=>this.StartOver()}/>
 				<Question display={this.state.QAssNo} q="Are you trying to create a theory?" 
@@ -650,7 +653,7 @@ export default class AnalysisFinder extends React.Component{
 				<Question display={this.state.QAssNoNoS} q="What kind of variables do you have?" 
 					a1="Categorical" a2="Continuous" 
 					f1={()=>this.QAssNoNoSCat()} f2={()=>this.QAssNoNoSCont()} StartOver={()=>this.StartOver()}/>
-				<Question display={this.state.QAssNoNoM} q="CLUSTER OR FACTOR?" 
+				<Question display={this.state.QAssNoNoM} q="Are you trying to predict group membership?" 
 					a1="Yes" a2="No" 
 					f1={()=>this.QAssNoNoMYes()} f2={()=>this.QAssNoNoMNo()} StartOver={()=>this.StartOver()}/>
 				
