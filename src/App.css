@@ -1,3 +1,24 @@
+
+html{
+  background: #959595; 
+  background: -moz-linear-gradient(left, #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 53%, #4e4e4e 76%, #383838 87%, #1b1b1b 100%); 
+  background: -webkit-linear-gradient(left, #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%);   
+  background: linear-gradient(to right, #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=1 ); 
+  box-sizing:border-box;
+  font-family: 'Quattrocento', serif;
+}
+
+p, h3{
+  font-size:17px;
+  font-family: 'Quattrocento', serif;
+}
+
+h1, h2{
+  font-family: 'Oswald', sans-serif;
+}
+
+
 .App {
   text-align: center;
 }

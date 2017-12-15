@@ -1,17 +1,47 @@
 .StartOver:hover{
-	color:white;
+	color:#ff0d0d;
 	cursor:pointer;
 	width:30%;
 	margin-left: auto;
 	margin-right: auto;
+}
+.StartOver{
+	margin-bottom: 5px;
 }
 
 .content, .AnalysisQuestion{
 	width:66%;
 	margin-left: auto;
 	margin-right: auto;
-	background: grey;
 	box-sizing: border-box;
 	padding:5px;
 	padding-bottom: 10px;
+	color:white;
+	background: #45484d; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #45484d 0%, #000000 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	border:ridge;
+	border-radius: 10px 10px 10px 10px;
+}
+ul{
+	padding-left:0px;
+	list-style: none;
+}
+.AnalysisName{
+	color:#ff0d0d;
+}
+.Assumptions{
+	border-left:none;
+	border-right:none;
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media only screen and (max-width:400px){
+	.content, .AnalysisQuestion{
+		box-sizing: border-box;
+		width:100%;
+	}
 }

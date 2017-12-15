@@ -29,19 +29,19 @@ export default class Info extends React.Component{
 				<Header />
 				<div  className="InfoContainer">
 					<div className="Question" onClick={()=>this.handleClickQ1()}>
-						<h3>What is AnalysisPrep?</h3>
+						<h2>What is AnalysisPrep?</h2>
 					</div>
 					<ToggleDisplay show={this.state.q1}>
 					<div className="Answer">
 						<p>An application designed to save hours of prep work before an analysis is run.</p>
-						<p>It helps the user select the appropriate analysis, meet all assumptions, and perform some basic calculcations.</p>
+						<p>It helps the user select the appropriate analysis, check for all assumptions, look up some simple definitions and perform some basic calculcations, all in one place for the first time.</p>
 					</div>
 					</ToggleDisplay>
 					<div className="Question" onClick={()=>this.handleClickContact()}>
-						<h3>Contact</h3>
+						<h2>Contact</h2>
 					</div>
 					<ToggleDisplay show={this.state.contact}>
-					<div className="Answer">
+					<div className="Answer Contact">
 						<a href="mailto:idlepython@gmail.com">idlepython@gmail.com</a>
 					</div>
 					</ToggleDisplay>

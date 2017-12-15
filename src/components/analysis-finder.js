@@ -10,7 +10,11 @@ export default class AnalysisFinder extends React.Component{
 	constructor(){
 		super();
 		this.state={
-			Answer:{},
+			Answer:{
+				data:{
+					ass:[]
+				}
+			},
 
 			type:"None",
 			purp:"None",
@@ -68,12 +72,12 @@ export default class AnalysisFinder extends React.Component{
 	};
 	loadAnswer(){
 		let search=`${this.state.type}/${this.state.purp}/${this.state.IV}/${this.state.CtP}/${this.state.OT}/${this.state.DVL}/${this.state.DV}/${this.state.IVL}/${this.state.fact}/${this.state.hier}/${this.state.mod}/${this.state.scale}/${this.state.EFQ}/${this.state.theory}/${this.state.var}/${this.state.DFA}`;
-		axios.get(`${API_BASE_URL}api/${search}.json`)
+		axios.get(`${API_BASE_URL}api/${search}`)
 			.then(res => {
 				let Answer = res;
 				this.setState({Answer})
 			});
-		console.log({this.state.Answer});
+		console.log(this.state.Answer);
 	};
 	handleClickStart(){
 		this.setState({
@@ -83,7 +87,11 @@ export default class AnalysisFinder extends React.Component{
 	};
 	StartOver(){
 		this.setState({
-			Answer:{},
+			Answer:{
+				data:{
+					ass:[]
+				}
+			},
 
 			type:"None",
 			purp:"None",
@@ -149,6 +157,8 @@ export default class AnalysisFinder extends React.Component{
 				QDes:false,
 				A:true,
 				IV:"Cat"
+			}, function afterStateChange(){
+				this.loadAnswer();
 			});
 		};
 		QDesCont(){
@@ -163,6 +173,8 @@ export default class AnalysisFinder extends React.Component{
 					QDesCont:false,
 					A:true,
 					purp:"Avg"
+				}, function afterStateChange(){
+					this.loadAnswer();
 				});
 			};
 			QDesContSpread(){
@@ -170,6 +182,8 @@ export default class AnalysisFinder extends React.Component{
 					QDesCont:false,
 					A:true,
 					purp:"Spread"
+				}, function afterStateChange(){
+					this.loadAnswer();
 				});
 			};
 
@@ -202,6 +216,8 @@ export default class AnalysisFinder extends React.Component{
 					QInfCatCat:false,
 					A:true,
 					CtP:"Yes"
+					}, function afterStateChange(){
+						this.loadAnswer();
 					});
 				};
 				QInfCatCatNo(){
@@ -223,6 +239,8 @@ export default class AnalysisFinder extends React.Component{
 							QInfCatCatNoYes:false,
 							A:true,
 							DVL:"More"
+							}, function afterStateChange(){
+								this.loadAnswer();
 							});
 						};
 						QInfCatCatNoYesNo(){
@@ -230,6 +248,8 @@ export default class AnalysisFinder extends React.Component{
 							QInfCatCatNoYes:false,
 							A:true,
 							DVL:"One"
+							}, function afterStateChange(){
+								this.loadAnswer();
 							});
 						};
 					QInfCatCatNoNo(){
@@ -237,6 +257,8 @@ export default class AnalysisFinder extends React.Component{
 						QInfCatCatNo:false,
 						A:true,
 						OT:"No"
+						}, function afterStateChange(){
+							this.loadAnswer();
 						});
 					};
 			QInfCatCont(){
@@ -265,6 +287,8 @@ export default class AnalysisFinder extends React.Component{
 							QInfCatContSS:false,
 							A:true,
 							OT:"Yes"
+							}, function afterStateChange(){
+								this.loadAnswer();
 							});
 						};
 						QInfCatContSSNo(){
@@ -272,6 +296,8 @@ export default class AnalysisFinder extends React.Component{
 							QInfCatContSS:false,
 							A:true,
 							OT:"No"
+							}, function afterStateChange(){
+								this.loadAnswer();
 							});
 						};
 					QInfCatContSM(){
@@ -286,6 +312,8 @@ export default class AnalysisFinder extends React.Component{
 							QInfCatContSM:false,
 							A:true,
 							fact:"Yes"
+							}, function afterStateChange(){
+								this.loadAnswer();
 							});
 						};
 						QInfCatContSMNo(){
@@ -293,6 +321,8 @@ export default class AnalysisFinder extends React.Component{
 							QInfCatContSM:false,
 							A:true,
 							fact:"No"
+							}, function afterStateChange(){
+								this.loadAnswer();
 							});
 						};
 				QInfCatContM(){
@@ -307,6 +337,8 @@ export default class AnalysisFinder extends React.Component{
 						QInfCatContM:false,
 						A:true,
 						fact:"Yes"
+						}, function afterStateChange(){
+							this.loadAnswer();
 						});
 					};
 					QInfCatContMNo(){
@@ -314,6 +346,8 @@ export default class AnalysisFinder extends React.Component{
 						QInfCatContM:false,
 						A:true,
 						fact:"No"
+						}, function afterStateChange(){
+							this.loadAnswer();
 						});
 					};
 		QInfCont(){
@@ -342,6 +376,8 @@ export default class AnalysisFinder extends React.Component{
 							QInfContCatS:false,
 							A:true,
 							hier:"Yes"
+						}, function afterStateChange(){
+							this.loadAnswer();
 						});
 					};
 					QInfContCatSNo(){
@@ -349,6 +385,8 @@ export default class AnalysisFinder extends React.Component{
 							QInfContCatS:false,
 							A:true,
 							hier:"No"
+						}, function afterStateChange(){
+							this.loadAnswer();
 						});
 					};
 				QInfContCatM(){
@@ -363,6 +401,8 @@ export default class AnalysisFinder extends React.Component{
 							QInfContCatM:false,
 							A:true,
 							hier:"Yes"
+						}, function afterStateChange(){
+							this.loadAnswer();
 						});
 					};
 					QInfContCatMNo(){
@@ -370,6 +410,8 @@ export default class AnalysisFinder extends React.Component{
 							QInfContCatM:false,
 							A:true,
 							hier:"No"
+						}, function afterStateChange(){
+							this.loadAnswer();
 						});
 					};
 			QInfContCont(){
@@ -391,6 +433,8 @@ export default class AnalysisFinder extends React.Component{
 							QInfContContS:false,
 							A:true,
 							IV:"ContS"
+						}, function afterStateChange(){
+							this.loadAnswer();
 						});
 					};	
 					QInfContContSM(){
@@ -419,6 +463,8 @@ export default class AnalysisFinder extends React.Component{
 									QInfContContSMMod:false,
 									A:true,
 									mod:"Yes"
+								}, function afterStateChange(){
+									this.loadAnswer();
 								});
 							};
 							QInfContContSMModNo(){
@@ -426,6 +472,8 @@ export default class AnalysisFinder extends React.Component{
 									QInfContContSMMod:false,
 									A:true,
 									mod:"No"
+								}, function afterStateChange(){
+									this.loadAnswer();
 								});
 							};
 				QInfContContM(){
@@ -433,6 +481,8 @@ export default class AnalysisFinder extends React.Component{
 						QInfContCont:false,
 						A:true,
 						DV:"ContM"
+					}, function afterStateChange(){
+						this.loadAnswer();
 					});
 				};
 
@@ -457,6 +507,8 @@ export default class AnalysisFinder extends React.Component{
 					QAssYes:false,
 					A:true,
 					scale:"Old"
+				}, function afterStateChange(){
+					this.loadAnswer();
 				});
 			};
 			QAssYesNo(){
@@ -471,6 +523,8 @@ export default class AnalysisFinder extends React.Component{
 						QAssYesNo:false,
 						A:true,
 						EFQ:"Yes"
+					}, function afterStateChange(){
+						this.loadAnswer();
 					});
 				};
 				QAssYesNoNo(){
@@ -478,6 +532,8 @@ export default class AnalysisFinder extends React.Component{
 						QAssYesNo:false,
 						A:true,
 						EFQ:"No"
+					}, function afterStateChange(){
+						this.loadAnswer();
 					});
 				};
 		QAssNo(){
@@ -492,6 +548,8 @@ export default class AnalysisFinder extends React.Component{
 					QAssNo:false,
 					A:true,
 					theory:"Yes"
+				}, function afterStateChange(){
+					this.loadAnswer();
 				});
 			};
 			QAssNoNo(){
@@ -513,6 +571,8 @@ export default class AnalysisFinder extends React.Component{
 							QAssNoNoS:false,
 							A:true,
 							var:"CatS"
+						}, function afterStateChange(){
+							this.loadAnswer();
 						});
 					};
 					QAssNoNoSCont(){
@@ -520,6 +580,8 @@ export default class AnalysisFinder extends React.Component{
 							QAssNoNoS:false,
 							A:true,
 							var:"ContS"
+						}, function afterStateChange(){
+							this.loadAnswer();
 						});
 					};
 				QAssNoNoM(){
@@ -534,6 +596,8 @@ export default class AnalysisFinder extends React.Component{
 							QAssNoNoM:false,
 							A:true,
 							DFA:"Yes"
+						}, function afterStateChange(){
+							this.loadAnswer();
 						});
 					};
 					QAssNoNoMNo(){
@@ -541,6 +605,8 @@ export default class AnalysisFinder extends React.Component{
 							QAssNoNoM:false,
 							A:true,
 							DFA:"No"
+						}, function afterStateChange(){
+							this.loadAnswer();
 						});
 					};
 
@@ -548,6 +614,12 @@ export default class AnalysisFinder extends React.Component{
 
 
 	render(){
+		let ass=this.state.Answer.data.ass;
+		ass = ass.map(function(item,index){
+			return(
+				<li>{item}</li>
+			);	
+		});
 		return(
 			<div>
 				<Header />
@@ -555,15 +627,15 @@ export default class AnalysisFinder extends React.Component{
 					<div className="content">
 						<h2>AnalysisFinder</h2>
 						<h3>AnalysisFinder will walk you through the process of selecting the appropriate analysis depending on your data and what you want to do with it</h3>
-						<button onClick={()=>this.handleClickStart()}>Click Here to Begin!</button>
+						<button className="AnswerButton" onClick={()=>this.handleClickStart()}>Click Here to Begin!</button>
 					</div>
 				</ToggleDisplay>
 				<ToggleDisplay show={this.state.Q}>
 					<div className="AnalysisQuestion">
-						<h2>What do you want to do with your data?</h2>
-						<button onClick={()=>this.QDes()}>Describe it</button>
-						<button onClick={()=>this.QInf()}>Infer Conclusions</button>
-						<button onClick={()=>this.QAss()}>Learn Associations</button>
+						<h2>What do you want to know about your data?</h2>
+						<button className="AnswerButton" onClick={()=>this.QDes()}>Descriptions</button>
+						<button className="AnswerButton" onClick={()=>this.QInf()}>Conclusions</button>
+						<button className="AnswerButton" onClick={()=>this.QAss()}>Associations</button>
 					</div>
 				</ToggleDisplay>
 				
@@ -617,16 +689,13 @@ export default class AnalysisFinder extends React.Component{
 					f1={()=>this.QInfContCatSYes()} f2={()=>this.QInfContCatSNo()} StartOver={()=>this.StartOver()}/>
 				<Question display={this.state.QInfContCatM} q="Do you want to know how much influence each variable has?" 
 					a1="Yes" a2="No" 
-					f1={()=>this.QInfContCatMYes()} f2={()=>this.QInfContCattMNo()} StartOver={()=>this.StartOver()}/>
+					f1={()=>this.QInfContCatMYes()} f2={()=>this.QInfContCatMNo()} StartOver={()=>this.StartOver()}/>
 				<Question display={this.state.QInfContCont} q="How many DV do you have?" 
 					a1="One" a2="More" 
 					f1={()=>this.QInfContContS()} f2={()=>this.QInfContContM()} StartOver={()=>this.StartOver()}/>
 				<Question display={this.state.QInfContContS} q="How many IV do you have?" 
 					a1="One" a2="More" 
 					f1={()=>this.QInfContContSS()} f2={()=>this.QInfContContSM()} StartOver={()=>this.StartOver()}/>
-				
-
-
 				<Question display={this.state.QInfContContSM} q="Do you want to know how much influence each variable has?" 
 					a1="Yes" a2="No" 
 					f1={()=>this.QInfContContSMYes()} f2={()=>this.QInfContContSMNo()} StartOver={()=>this.StartOver()}/>
@@ -662,11 +731,13 @@ export default class AnalysisFinder extends React.Component{
 
 				<ToggleDisplay show={this.state.A}>
 					<div className="AnalysisQuestion">
-						<h2>Answer Placeholder</h2>
-						<h2>{this.state.Answer.name}</h2>
+						<h3>You Should Run:</h3>
+						<h2 className="AnalysisName">{this.state.Answer.data.name}</h2>
+						<h3>Assumptions:</h3>
+						<ul className="Assumptions">{ass}</ul>
 						<p className="StartOver" onClick={()=>this.StartOver()}>Start Over?</p>
 					</div>
-				</ToggleDisplay>
+				</ ToggleDisplay>
 			</div>
 		);			
 	};

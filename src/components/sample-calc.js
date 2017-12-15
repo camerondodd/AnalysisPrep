@@ -38,11 +38,12 @@ export default class SampleCalc extends React.Component {
 		const base = ((this.state.Z * this.state.SD)/this.state.MOE);
 		const N = Math.pow(base,2);
 		return(
-			<div className='CalcContainer'>
+			<div>
 				<div className="TitleContainer">
 					<h2 onClick={()=>this.handleClick()}>Minimum Sample Size</h2>
 				</div>
 				<ToggleDisplay show={this.state.show}>
+				<div className="CalcContainer">
 				<h3>Common Confidence-z Values</h3>
 				<h4>(Assuming Normality)</h4>
 				<div className="left">
@@ -68,6 +69,7 @@ export default class SampleCalc extends React.Component {
 					<CalcInput id="MOE" label="Margin of Error" min={0} step={1} value={this.state.MOE} onChange={value => this.setMOE(value)} />
 					<CalcOutput id="N" label="Minimum Sample Size(n) = " value={N.toFixed(1)} />
 				</form>
+				</div>
 				</ToggleDisplay>
 			</div>
 		)

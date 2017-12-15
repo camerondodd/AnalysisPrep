@@ -1,25 +1,43 @@
 .navList{
 	width:100%;
 }
-ul{
+.navUl{
 	box-sizing: border-box;
 	list-style:none;
 	text-align:center;
-	background:black;
+	background: #ff0d0d; /* Old browsers */
+	background: -moz-linear-gradient(top, #ff0d0d 0%, #ff2d30 50%, #e80008 51%, #ee0008 71%, #f40010 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #ff0d0d 0%,#ff2d30 50%,#e80008 51%,#ee0008 71%,#f40010 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #ff0d0d 0%,#ff2d30 50%,#e80008 51%,#ee0008 71%,#f40010 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0d0d', endColorstr='#f40010',GradientType=0 ); /* IE6-9 */
 	width:100%;
 }
 
-li{
+.navLi{
 	display:inline-block;
 	margin:0px;
 	padding-left: 3%;
 	padding-right: 3%;
 	text-decoration:none;
-	border-left:solid white 1px;
-	border-right: solid white 1px;
+	border-left:ridge;
+	border-right: ridge;
+}
+
+.link:hover{
+	cursor:pointer;
+	color:black;
 }
 
 .link{
 	text-decoration:none;
 	color:white;
+	font-weight: bold;
+}
+
+@media only screen and (max-width:400px){
+	.navLi{
+		box-sizing: border-box;
+		width:100%;
+		border:ridge;
+	}
 }

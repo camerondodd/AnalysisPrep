@@ -5,9 +5,33 @@ table{
 }
 
 th{
-	background: grey;
+	background: #aebcbf; /* Old browsers */
+	background: -moz-linear-gradient(top, #aebcbf 0%, #6e7774 20%, #0a0e0a 21%, #0a0809 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #aebcbf 0%,#6e7774 20%,#0a0e0a 21%,#0a0809 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #aebcbf 0%,#6e7774 20%,#0a0e0a 21%,#0a0809 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aebcbf', endColorstr='#0a0809',GradientType=0 ); /* IE6-9 */
+	color:white;
+	padding:5px;
 }
 
 tr{
-	background:darkgrey;
+	background: #45484d; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #45484d 0%, #000000 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	color:white;
+}
+
+td{
+	border:solid grey 1px;
+	padding:5px;
+	font-family: 'Quattrocento', serif;
+}
+
+@media only screen and (max-width:400px){
+	table{
+		box-sizing: border-box;
+		width:100%;
+	}
 }

@@ -32,11 +32,12 @@ export default class SlovinSampleCalc extends React.Component {
 		const aSquared = Math.pow(this.state.a,2);
 		const N = this.state.P/(1+this.state.P * aSquared);
 		return(
-			<div className="CalcContainer">
+			<div>
 				<div className="TitleContainer">
 					<h2 onClick={()=>this.handleClick()}>Slovins Sample Size</h2>
 				</div>
 				<ToggleDisplay show={this.state.show}>
+				<div className="CalcContainer">
 					<h3>Common Alpha Values</h3>
 					<div className="left">
 						<h4>Confidence</h4>
@@ -60,6 +61,7 @@ export default class SlovinSampleCalc extends React.Component {
 						<CalcInput id="P" label="Population" min={1} step={1} value={this.state.P} onChange={value => this.setP(value)} />
 						<CalcOutput id="N" label="Minimum Sample Size(n) = " value={N.toFixed(1)} />
 					</form>
+				</div>
 				</ToggleDisplay>
 			</div>
 		)

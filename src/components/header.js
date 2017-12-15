@@ -5,7 +5,7 @@ import './header.css';
 export default class Header extends React.Component{
 	render(){
 		return(
-			<div>
+			<div className="header">
 				<h1>AnalysisPrep</h1>
 				<Nav />
 			</div>
