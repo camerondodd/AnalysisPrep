@@ -14,8 +14,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
-	padding:5px;
-	padding-bottom: 10px;
+	padding:10px;
 	color:white;
 	background: #45484d; /* Old browsers */
 	background: -moz-linear-gradient(-45deg, #45484d 0%, #000000 100%); /* FF3.6-15 */
@@ -38,6 +37,18 @@ ul{
 	text-align:center;
 	margin-left: auto;
 	margin-right: auto;
+}
+.Example{
+	font-weight: normal;
+}
+.ExampleHeader{
+	margin:0;
+	padding:0;
+	text-decoration: underline;
+}
+.ExampleHeader:hover{
+	cursor:pointer;
+	color:#ff0d0d;
 }
 @media only screen and (max-width:400px){
 	.content, .AnalysisQuestion{

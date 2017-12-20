@@ -34,6 +34,7 @@ export default class AnalysisFinder extends React.Component{
 			DFA:"None",
 
 			title:true,
+			example:false,
 			A:false,
 			Q:false,
 			QDes:false,
@@ -85,6 +86,11 @@ export default class AnalysisFinder extends React.Component{
 			Q:true
 		});
 	};
+	handleExample(){
+		this.setState({
+			example:!this.state.example
+		});
+	};
 	StartOver(){
 		this.setState({
 			Answer:{
@@ -111,6 +117,7 @@ export default class AnalysisFinder extends React.Component{
 			DFA:"None",
 
 			title:true,
+			example:false,
 			A:false,
 			Q:false,
 			QDes:false,
@@ -626,11 +633,20 @@ export default class AnalysisFinder extends React.Component{
 				<ToggleDisplay show={this.state.title}>
 					<div className="content">
 						<h2>AnalysisPrep</h2>
-						<h3>With modern technology, like SPSS, actually running an analysis only takes one click of a button.  The hard part is the prep work.</h3>
-						<h3>What test should I run? Do I meet the conditions to be able to trust my results?  How many data points do I need?</h3>
-						<h3>This is where AnalysisPrep comes in!  This application is designed to bring everything you need into one place, and streamline hours worth of prep work into minutes, so you can press your one button in SPSS that much sooner. </h3>
-						<h3>With over 30 different analyses, AnalysisPrep is the most comprehensive guide to be found, and the only one to include assumptions and sample size calculators; everything you need to get started.</h3>
-						<h4>Click below to get started</h4>
+						<h3>Statistics is a growing field, and can be found everywhere from private research and academics to public health and sports.  Analyses are the key to this field, and work with everything from a couple entries to databases with millions of entries and hundreds of variables, crunching the numbers into a useful result.</h3>
+						<h3>With modern technology, like SPSS, actually running an analysis only takes one click of a button.  The hard part is the prep work. What test should I run? Do I meet the conditions to be able to trust my results?  How many data points do I need?</h3>
+						<h2 className="ExampleHeader" onClick={()=>this.handleExample()}>Example</h2>
+						<ToggleDisplay show={this.state.example}>
+							<h4 className="Example">John has a love of kittens and collects them. He wants his kittens to be healthy and strong, so he wants to feed them the right kind of food.  However, he doesn't know what kind of food to feed them, so he feeds half of his kittens one kind of food and the other half a different kind of food.  Then he measures how much they grow. John has performed a study!</h4>
+							<h4 className="Example">Now he has his results, and software to run them, but he has no idea which analysis to run to find out if there is a difference between the two kinds of food when looking at their impact on kitten growth.  There are so many!  John hops online to find a guide, but the guides are all specialized and he doesn't know which to use, so he gets out his college statistics book to find out where to start.</h4>
+							<h4 className="Example">John finds out the type of analysis he should be running from the book and locates the appropriate guide online, which tells him what analysis to run, but John knows it isn't that simple.  He recalls that certain conditions must be met before an analysis can be run, and his guide did not give him the required assumptions so he goes back to his text book and hopes that specific analysis is in it and that the assumptions are listed for it.</h4>
+							<h4 className="Example">Finally, he knows what to run and what conditions must be met, but, he realizes with dismay, he doesn't know how many measurements he needs to get accurate results.  After trying to figure out the math in his text book, he finds a sample generation calculator online.</h4>
+							<h4 className="Example">Hours since he started and frustrated with the entire process, looking up terms every step of the way, he has everything he needs to get started.</h4>
+							<h4 className="Example">John can't help but think there had to be an easier way.</h4>
+						</ToggleDisplay>
+						<h2>This is where AnalysisPrep comes in!</h2>
+						<h3>This application is designed to bring everything you need into one place, and streamline hours worth of prep work into minutes, so you can press your one button in SPSS that much sooner. With over 30 different analyses, AnalysisPrep is the most comprehensive guide to be found, and the only one to include assumptions and sample size calculators; everything you need to get started.</h3>
+						<h4>Click below to begin</h4>
 						<button className="AnswerButton" onClick={()=>this.handleClickStart()}>AnalysisFinder</button>
 					</div>
 				</ToggleDisplay>
