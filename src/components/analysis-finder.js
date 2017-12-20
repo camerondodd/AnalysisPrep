@@ -695,7 +695,7 @@ export default class AnalysisFinder extends React.Component{
 					f1={()=>this.QInfCatCatNoYes()} f2={()=>this.QInfCatCatNoNo()} StartOver={()=>this.StartOver()}/>
 				<Question display={this.state.QInfCatCatNoYes} q="Do you have more than one level of DV?" 
 					a1="Yes" a2="No" 
-					e1="EX: For my outcome, I am looking at breeds, but I also want to know about boy kittens and girl kittens within each breed" e2="I only want to look at kitten breeds"
+					e1="EX: For my outcome, I am looking at breeds, but I also want to know about boy kittens and girl kittens within each breed" e2="EX: I only want to look at kitten breeds"
 					f1={()=>this.QInfCatCatNoYesYes()} f2={()=>this.QInfCatCatNoYesNo()} StartOver={()=>this.StartOver()}/>
 				<Question display={this.state.QInfCatCont} q="How many DV do you have?" 
 					a1="One" a2="More" 
@@ -754,7 +754,7 @@ export default class AnalysisFinder extends React.Component{
 
 				<Question display={this.state.QAss} q="Are you trying to validate a scale?" 
 					a1="Yes" a2="No" 
-					e1="I want to make a scale to accurately measure kitten cuteness" e2="I don't think you Can objectively measure kitten cuteness"
+					e1="EX: I want to make a scale to accurately measure kitten cuteness" e2="EX: I don't think you Can objectively measure kitten cuteness"
 					f1={()=>this.QAssYes()} f2={()=>this.QAssNo()} StartOver={()=>this.StartOver()}/>
 				<Question display={this.state.QAssYes} q="Has the scale been validated before?" 
 					a1="Yes" a2="No" 
@@ -766,7 +766,7 @@ export default class AnalysisFinder extends React.Component{
 					f1={()=>this.QAssYesNoYes()} f2={()=>this.QAssYesNoNo()} StartOver={()=>this.StartOver()}/>
 				<Question display={this.state.QAssNo} q="Are you trying to create a theory?" 
 					a1="Yes" a2="No" 
-					e1="My kitten hypothesis must become a scientific theory!" e2="EX: I don't need to worry about kitten theories right now"
+					e1="EX: My kitten hypothesis must become a scientific theory!" e2="EX: I don't need to worry about kitten theories right now"
 					f1={()=>this.QAssNoYes()} f2={()=>this.QAssNoNo()} StartOver={()=>this.StartOver()}/>
 				<Question display={this.state.QAssNoNo} q="How many variables do you have?" 
 					a1="2" a2="More" 
