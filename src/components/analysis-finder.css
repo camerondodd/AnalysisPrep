@@ -45,3 +45,15 @@ ul{
 		width:100%;
 	}
 }
+.e1,.e2,.e3{
+	display:none;
+}
+.b1:hover ~ .e1{
+	display:block;
+}
+.b2:hover ~ .e2{
+	display:block;
+}
+.b3:hover ~ .e3{
+	display:block;
+}

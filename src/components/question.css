@@ -8,6 +8,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f40010', endColorstr='#ff0d0d',GradientType=0 ); /* IE6-9 */
 }
 .AnswerButton{
+	box-sizing: border-box;
 	background: #ff0d0d; /* Old browsers */
 	background: -moz-linear-gradient(top, #ff0d0d 0%, #ff2d30 50%, #e80008 51%, #ee0008 71%, #f40010 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, #ff0d0d 0%,#ff2d30 50%,#e80008 51%,#ee0008 71%,#f40010 100%); /* Chrome10-25,Safari5.1-6 */
@@ -16,8 +17,9 @@
 	border:ridge;
 	border-radius: 10px 10px 10px 10px;
 	padding:5px;
-	margin-left:1%;
-	margin-right:1%;
+	width:40%;
+	margin-left:30%;
+	margin-right:30%;
 	font-size:17px;
 	font-weight: bold;
 	font-family: 'Quattrocento', serif;

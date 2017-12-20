@@ -9,6 +9,7 @@ export default class Info extends React.Component{
 		this.state={
 			q1:false,
 			q2:false,
+			q3:false,
 			contact:false
 		};
 	};
@@ -16,13 +17,23 @@ export default class Info extends React.Component{
 		this.setState({
 			q1: !this.state.q1,
 			q2:false,
+			q3:false,
 			contact: false
 		});
 	};
 		handleClickQ2(){
 		this.setState({
-			q2: !this.state.q2,
 			q1:false,
+			q2: !this.state.q2,
+			q3:false,
+			contact: false
+		});
+	};
+		handleClickQ3(){
+		this.setState({
+			q1:false,
+			q2: false,
+			q3:!this.state.q3,
 			contact: false
 		});
 	};
@@ -30,6 +41,7 @@ export default class Info extends React.Component{
 		this.setState({
 			q1: false,
 			q2:false,
+			q3:false,
 			contact: !this.state.contact
 		});
 	};
@@ -59,6 +71,15 @@ export default class Info extends React.Component{
 						<p>After the user has found the analysis and met the assumptions, they can use the convenient calculators to find the minimum sample size, which can be a difficult process in and of itself.</p>
 						<p>All the while, the list of common definitions supports the user as they make their way through the process.</p>
 						<p>AnalysisPrep can save up to a day's worth of work with all of the tools needed to get the user ready to run their analysis.</p>
+					</div>
+					</ToggleDisplay>
+
+					<div className="Question" onClick={()=>this.handleClickQ3()}>
+						<h2>Who should use AnalysisPrep?</h2>
+					</div>
+					<ToggleDisplay show={this.state.q3}>
+					<div className="Answer">
+						<p>AnalysisPrep is largely aimed at analysts, researchers, and graduate students, but anyone with some background in statistics or is trying to learn statistics will benefit.</p>
 					</div>
 					</ToggleDisplay>
 
