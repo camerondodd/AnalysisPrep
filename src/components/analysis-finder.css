@@ -13,6 +13,7 @@
 	width:66%;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 100px;
 	box-sizing: border-box;
 	padding:10px;
 	color:white;
@@ -50,21 +51,16 @@ ul{
 	cursor:pointer;
 	color:#ff0d0d;
 }
+.clar{
+	text-decoration: underline;
+}
+.clar:hover{
+	cursor:pointer;
+	color:#ff0d0d;
+}
 @media only screen and (max-width:400px){
 	.content, .AnalysisQuestion{
 		box-sizing: border-box;
 		width:100%;
 	}
-}
-.e1,.e2,.e3{
-	display:none;
-}
-.b1:hover ~ .e1{
-	display:block;
-}
-.b2:hover ~ .e2{
-	display:block;
-}
-.b3:hover ~ .e3{
-	display:block;
 }

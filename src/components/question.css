@@ -25,3 +25,7 @@
 	font-family: 'Quattrocento', serif;
 }
 
+.Clarification:hover{
+	cursor:pointer;
+	color:#ff0d0d;
+}

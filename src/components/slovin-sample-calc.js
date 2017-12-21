@@ -37,7 +37,7 @@ export default class SlovinSampleCalc extends React.Component {
 					<h2 onClick={()=>this.handleClick()}>Slovins Sample Size</h2>
 				</div>
 				<ToggleDisplay show={this.state.show}>
-				<div className="CalcContainer">
+				<div className="CalcContainer last">
 					<h3>Common Alpha Values</h3>
 					<div className="left">
 						<h4>Confidence</h4>
@@ -63,6 +63,7 @@ export default class SlovinSampleCalc extends React.Component {
 					</form>
 				</div>
 				</ToggleDisplay>
+				<div className="PlaceHolder"></div>
 			</div>
 		)
 	}

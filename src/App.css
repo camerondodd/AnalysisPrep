@@ -1,12 +1,23 @@
 
 html{
-  background:black;
+   background: url(./background/calc1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+
   box-sizing:border-box;
   font-family: 'Quattrocento', serif;
+  height:100%;
 }
 
-p, h3{
+p{
   font-size:17px;
+  line-height: 21px;
+  font-family: 'Quattrocento', serif;
+}
+h3,h4{
+  line-height: 21px;
   font-family: 'Quattrocento', serif;
 }
 

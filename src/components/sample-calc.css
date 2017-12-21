@@ -16,6 +16,13 @@
 .CalcContainer h3{
 	margin-top:0px;
 }
+.PlaceHolder{
+	height:100px;
+}
+.last{
+	border-bottom: ridge;
+	border-radius: 0px 0px 10px 10px;
+}
 .TitleContainer{
 	background: #ff0d0d; /* Old browsers */
 	background: -moz-linear-gradient(top, #ff0d0d 0%, #ff2d30 50%, #e80008 51%, #ee0008 71%, #f40010 100%); /* FF3.6-15 */
