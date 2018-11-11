@@ -822,19 +822,19 @@ export default class AnalysisFinder extends React.Component{
 				<Header />
 				<ToggleDisplay show={this.state.title}>
 					<div className="content">
-						<h2>AnalysisPrep</h2>
+						<h2>Analysis Prep</h2>
 						<h3>Statistics is a growing field, and can be found everywhere from private research and academics to public health and sports.  Analyses are the key to this field, and work with everything from a couple entries to databases with millions of entries and hundreds of variables, crunching the numbers into a useful result.</h3>
 						<h3>With modern technology, like SPSS, actually running an analysis only takes one click of a button.  The hard part is the prep work. What test should I run? Do I meet the conditions to be able to trust my results?  How many data points do I need?</h3>
 						<h2 className="ExampleHeader" onClick={()=>this.handleExample()}>Example</h2>
 						<ToggleDisplay show={this.state.example}>
 							<h4>John, a web developer, has several websites of different layouts and he wants to see which layouts are more popular, so he tracks things like number of visits and how long someone stays on a page.  After collecting all of this data he has two options:</h4>
 							<h4>Option 1. John can spend up to a day looking up different guides, different sample calculators, term defitions, and assumptions trying to get the appropriate set of conditions for his data, so he can start his analysis.</h4>
-							<h4>Option 2. John can spend minutes with AnalysisPrep. </h4> 
+							<h4>Option 2. John can spend minutes with Analysis Prep. </h4> 
 						</ToggleDisplay>
-						<h2>This is where AnalysisPrep comes in!</h2>
-						<h3>This application is designed to bring everything you need into one place, and streamline hours worth of prep work into minutes, so you can press your one button in SPSS that much sooner. With over 30 different analyses, AnalysisPrep is the most comprehensive guide to be found, and the only one to include assumptions and sample size calculators; everything you need to get started.</h3>
+						<h2>This is where Analysis Prep comes in!</h2>
+						<h3>This application is designed to bring everything you need into one place, and streamline hours worth of prep work into minutes, so you can press your one button in SPSS that much sooner. With over 30 different analyses, Analysis Prep is the most comprehensive guide to be found, and the only one to include assumptions and sample size calculators; everything you need to get started.</h3>
 						<h4>Click below to begin</h4>
-						<button className="AnswerButton" onClick={()=>this.handleClickStart()}>AnalysisFinder</button>
+						<button className="AnswerButton" onClick={()=>this.handleClickStart()}>Analysis Finder</button>
 					</div>
 				</ToggleDisplay>
 				<ToggleDisplay show={this.state.Q}>

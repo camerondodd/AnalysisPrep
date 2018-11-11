@@ -33,8 +33,8 @@ export default class SlovinSampleCalc extends React.Component {
 		const N = this.state.P/(1+this.state.P * aSquared);
 		return(
 			<div>
-				<div className="TitleContainer">
-					<h2 onClick={()=>this.handleClick()}>Slovins Sample Size</h2>
+				<div className="TitleContainer" onClick={()=>this.handleClick()}>
+					<h2 >Slovins Sample Size</h2>
 				</div>
 				<ToggleDisplay show={this.state.show}>
 				<div className="CalcContainer last">
@@ -57,9 +57,14 @@ export default class SlovinSampleCalc extends React.Component {
 					</div>
 					<div className="clear"></div>
 					<form>
-						<CalcInput id="a" label="a" min={.01} step={.01} value={this.state.a} onChange={value => this.setA(value)} />
-						<CalcInput id="P" label="Population" min={1} step={1} value={this.state.P} onChange={value => this.setP(value)} />
-						<CalcOutput id="N" label="Minimum Sample Size(n) = " value={N.toFixed(1)} />
+						<div className="calcIn">
+							<CalcInput id="a" label="a" min={.01} step={.01} value={this.state.a} onChange={value => this.setA(value)} />
+							<CalcInput id="P" label="Population" min={1} step={1} value={this.state.P} onChange={value => this.setP(value)} />
+						</div>
+						<div className="calcOut">
+							<h2>Minimum Sample Size</h2>
+							<CalcOutput id="N" label=" " value={N.toFixed(1)} />
+						</div>
 					</form>
 				</div>
 				</ToggleDisplay>

@@ -1,5 +1,5 @@
 .StartOver:hover{
-	color:#ff0d0d;
+	color:white;
 	cursor:pointer;
 	width:30%;
 	margin-left: auto;
@@ -11,19 +11,21 @@
 
 .content, .AnalysisQuestion{
 	width:66%;
+	margin-top: 150px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 100px;
 	box-sizing: border-box;
-	padding:10px;
-	color:white;
-	background: #45484d; /* Old browsers */
-	background: -moz-linear-gradient(-45deg, #45484d 0%, #000000 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(-45deg, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(135deg, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	border:ridge;
-	border-radius: 10px 10px 10px 10px;
+	padding:50px;
+	color:#00204A;
+	background:#FDB44B;
+	border:none;
+	letter-spacing: 1px;
+	line-height: 30px;
+
+}
+.content h3, .content h4{
+	text-align: left;
 }
 ul{
 	padding-left:0px;
@@ -49,16 +51,16 @@ ul{
 }
 .ExampleHeader:hover{
 	cursor:pointer;
-	color:#ff0d0d;
+	color:white;
 }
 .clar{
 	text-decoration: underline;
 }
 .clar:hover{
 	cursor:pointer;
-	color:#ff0d0d;
+	color:white;
 }
-@media only screen and (max-width:400px){
+@media only screen and (max-width:700px){
 	.content, .AnalysisQuestion{
 		box-sizing: border-box;
 		width:100%;

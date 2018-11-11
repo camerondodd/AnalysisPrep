@@ -1,43 +1,29 @@
-.navList{
-	width:100%;
-}
-.navUl{
-	box-sizing: border-box;
-	list-style:none;
-	text-align:center;
-	background: #ff0d0d; /* Old browsers */
-	background: -moz-linear-gradient(top, #ff0d0d 0%, #ff2d30 50%, #e80008 51%, #ee0008 71%, #f40010 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, #ff0d0d 0%,#ff2d30 50%,#e80008 51%,#ee0008 71%,#f40010 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, #ff0d0d 0%,#ff2d30 50%,#e80008 51%,#ee0008 71%,#f40010 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0d0d', endColorstr='#f40010',GradientType=0 ); /* IE6-9 */
-	width:100%;
-}
-
 .navLi{
 	display:inline-block;
 	margin:0px;
-	padding-left: 3%;
-	padding-right: 3%;
 	text-decoration:none;
-	border-left:ridge;
-	border-right: ridge;
+	position:relative;
+	left:30%;
+	padding-left: 15px;
+	top:0;
+	color:white;
+}
+.navUl{
+	margin:0;
 }
 
 .link:hover{
 	cursor:pointer;
-	color:black;
+	color:#FDB44B;
 }
 
 .link{
-	text-decoration:none;
 	color:white;
 	font-weight: bold;
 }
 
-@media only screen and (max-width:400px){
+@media only screen and (max-width:1250px){
 	.navLi{
-		box-sizing: border-box;
-		width:100%;
-		border:ridge;
+		left:0;
 	}
 }

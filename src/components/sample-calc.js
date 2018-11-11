@@ -39,8 +39,8 @@ export default class SampleCalc extends React.Component {
 		const N = Math.pow(base,2);
 		return(
 			<div>
-				<div className="TitleContainer">
-					<h2 onClick={()=>this.handleClick()}>Minimum Sample Size</h2>
+				<div className="TitleContainer" onClick={()=>this.handleClick()}>
+					<h2 >Minimum Sample Size</h2>
 				</div>
 				<ToggleDisplay show={this.state.show}>
 				<div className="CalcContainer">
@@ -64,10 +64,15 @@ export default class SampleCalc extends React.Component {
 				</div>
 				<div className="clear"></div>
 				<form>
-					<CalcInput id="Z" label="z" min={-3.40} step={.01} value={this.state.Z} onChange={value => this.setZ(value)} />
-					<CalcInput id="SD" label="Standard Deviation" min={0} step={1} value={this.state.SD} onChange={value => this.setSD(value)} />
-					<CalcInput id="MOE" label="Margin of Error" min={0} step={1} value={this.state.MOE} onChange={value => this.setMOE(value)} />
-					<CalcOutput id="N" label="Minimum Sample Size(n) = " value={N.toFixed(1)} />
+					<div className="calcIn">
+						<CalcInput id="Z" label="z" min={-3.40} step={.01} value={this.state.Z} onChange={value => this.setZ(value)} />
+						<CalcInput id="SD" label="Standard Deviation" min={0} step={1} value={this.state.SD} onChange={value => this.setSD(value)} />
+						<CalcInput id="MOE" label="Margin of Error" min={0} step={1} value={this.state.MOE} onChange={value => this.setMOE(value)} />
+					</div>
+					<div className="calcOut">
+						<h2>Minimum Sample Size</h2>
+						<CalcOutput id="N" label=" " value={N.toFixed(1)} />
+					</div>
 				</form>
 				</div>
 				</ToggleDisplay>

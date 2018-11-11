@@ -1,33 +1,26 @@
 table{
 	width:66%;
+	margin-top: 150px;
 	margin-right: auto;
 	margin-left: auto;
-	margin-bottom: 100px;
+	margin-bottom: 150px;
 }
 
 th{
-	background: rgb(45,47,51); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(45,47,51,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, rgba(45,47,51,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, rgba(45,47,51,1) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d2f33', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	background: #00204A;
 	color:white;
 	padding:15px;
 	font-size:20px;
 }
 
 tr{
-	background: #45484d; /* Old browsers */
-	background: -moz-linear-gradient(-45deg, #45484d 0%, #000000 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(-45deg, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(135deg, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background: #005792;
 	color:white;
 }
 
 td{
 	border:solid grey 1px;
-	padding:5px;
+	padding:15px;
 	font-family: 'Quattrocento', serif;
 }
 

@@ -8,7 +8,10 @@ export default class Nav extends React.Component{
 			<div className="navList">
 				<ul className="navUl">
 					<li className="navLi">
-						<p><Link className="link" to="/">AnalysisFinder</Link></p>
+						<p><Link className="link" to="/">Home</Link></p>
+					</li>
+					<li className="navLi">
+						<p><Link className="link" to="/analysisfinder">Analysis Finder</Link></p>
 					</li>
 					<li className="navLi">
 						<p><Link className="link" to="/calc">Calculators</Link></p>	

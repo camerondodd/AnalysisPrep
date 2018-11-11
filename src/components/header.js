@@ -6,8 +6,8 @@ export default class Header extends React.Component{
 	render(){
 		return(
 			<div className="header">
-				<h1>AnalysisPrep</h1>
-				<Nav />
+				<span className="headerTitle">Analysis Prep</span>
+				<Nav/>
 			</div>
 		);			
 	};
